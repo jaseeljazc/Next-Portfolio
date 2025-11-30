@@ -14,11 +14,8 @@ const Navbar = () => {
   // State to track if the contact form is open
   const [contactFormOpen, setContactFormOpen] = useState(false);
 
-  // const openContactForm = () => setContactFormOpen(true);
-  // const closeContactForm = () => setContactFormOpen(false);
-
   return (
-    <header className="absolute w-full z-50 transition-all duration-300">
+<header className="sticky top-0 w-full z-50 transition-all duration-300 bg-black/10 h-16 sm:h-20 backdrop-blur-md">
       <div className="flex container mx-auto px-4 sm:px-6 lg:px-8 items-center justify-between h-16 md:h-20">
         {/* Logo/Name */}
         <motion.div
@@ -44,7 +41,7 @@ const Navbar = () => {
         </motion.div>
 
         {/* Desktop navigation */}
-        <nav className="sm:flex hidden space-x-8">
+        <nav className="md:flex hidden space-x-8">
           {[ "About", "Skills", "Project", "Contact"].map(
             (item, index) => (
               <motion.a
@@ -68,7 +65,7 @@ const Navbar = () => {
         </nav>
 
         {/* Social icons */}
-        <div className="md:flex sm:block hidden items-center space-x-4">
+        <div className="md:flex sm:hidden hidden items-center space-x-4">
           <motion.a
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -83,14 +80,14 @@ const Navbar = () => {
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 1.3, duration: 0.8 }}
-            className="text-gray-700 dark:text-gray-300 hover:text-violet-600 dark:hover:text-violet-400 transition-colors duration-300"
+            className="text-gray-700  dark:text-gray-300 hover:text-violet-600 dark:hover:text-violet-400 transition-colors duration-300"
             href="https://www.linkedin.com/in/muhammed-jaseel-923610376"
           >
             <FiLinkedin className="w-5 h-5" />
           </motion.a>
 
           {/* Hire me button */}
-          <a href="#contact">
+          <a href="/Muhammed-Jaseel-Resume.pdf" download className="btn">
             <motion.button
               // onClick={openContactForm}
               initial={{ opacity: 0, scale: 0.8 }}
@@ -104,7 +101,7 @@ const Navbar = () => {
               }}
               className="ml-4 px-4 py-2 rounded-xl bg-linear-to-r from-gray-400 to-gray-100 text-violet-700 font-bold hover:from-violet-600 hover:to-purple-700 hover:text-white transition-all duration-300"
             >
-              Contact Me
+             My Resume
             </motion.button>
           </a>
         </div>

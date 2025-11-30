@@ -1,21 +1,13 @@
-'use client'
-
-import { motion } from "framer-motion";
 import { Github, ExternalLink, Code } from "lucide-react";
 import Image from "next/image";
-import { projects } from "@/data/projects"
+import { projects } from "@/data/projects";
+
 const ProjectCom = () => {
- 
   return (
     <div className=" flex flex-col flex-wrap lg:flex-row justify-center items-center  sm:mx-5 gap-8">
-      {projects.map((project, index) => (
-        <motion.div
+      {projects.map((project) => (
+        <div
           key={project.id}
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ delay: index * 0.1, duration: 0.8 }}
-          whileHover={{ scale: 1.02 }}
-          viewport={{ once: true }}
           className="min-w-75 sm:w-92 w-50 min-h-[420px] h-[450px] hover:scale-105 bg-linear-to-br from-violet-900/30 to-black border border-violet-900/30 rounded-xl overflow-hidden hover:border-violet-600/50 transition-all duration-300"
         >
           <div className="sm:h-51 min-h-[200px] relative flex items-center justify-center overflow-hidden">
@@ -49,28 +41,24 @@ const ProjectCom = () => {
                 ))}
               </div>
               <div className="flex gap-4 ">
-                <motion.a
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                <a
                   href={project.github}
                   className="flex items-center gap-2 text-violet-400 hover:text-violet-300 transition-colors"
                 >
                   <Github className="w-4 h-4" />
                   Code
-                </motion.a>
-                <motion.a
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
+                </a>
+                <a
                   href={project.live}
                   className="flex items-center gap-2 text-violet-400 hover:text-violet-300 transition-colors"
                 >
                   <ExternalLink className="w-4 h-4" />
                   Live
-                </motion.a>
+                </a>
               </div>
             </div>
           </div>
-        </motion.div>
+        </div>
       ))}
     </div>
   );

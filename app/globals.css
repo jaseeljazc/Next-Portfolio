@@ -20,7 +20,7 @@ body {
   width: 100%;
   /* cursor: none;  */
   position: relative;
-  background-color: black;
+background: linear-gradient(to bottom, #4c1d95, #000000, #000000);
   color: white;
 }
 

@@ -1,5 +1,3 @@
-
-
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -18,9 +16,9 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Jaseel's Portfolio",
-  description: "Portfolio of Jaseel — MERN Stack Developer skilled in React, Next.js, Node.js, and modern web development.",
+  description:
+    "Portfolio of Jaseel — MERN Stack Developer skilled in React, Next.js, Node.js, and modern web development.",
 };
-
 
 export default function RootLayout({
   children,
@@ -32,12 +30,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div>
-          <Navbar/>
-        </div>
+        <Navbar />
+
         {children}
         <div>
-          <Footer/>
+          <Footer />
         </div>
       </body>
     </html>
