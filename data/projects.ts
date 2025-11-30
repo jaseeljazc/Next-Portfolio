@@ -1,14 +1,15 @@
 export const projects = [
-    {
+  {
       id: 1,
-      title: "Mini Spotify-clone Website",
+      title: "Movie Stack",
       description:
-        "A mini Spotify clone built with React for browsing and playing music.",
-      tags: ["React", "Tailwind"],
-      github: "https://github.com/jaseeljazc/Mini-Spotify-Clone",
-      live: "https://mini-spotify-clone.vercel.app/",
-      image: "/images/Spotify-clone.png",
+        "A responsive and sleek movie explorer powered by Next.js, Tailwind CSS and the TMDB API.",
+      tags: ["Nextjs", "Tailwind CSS"],
+      github: "https://github.com/jaseeljazc/movie-stack",
+      live: "https://jas-movie-stack.vercel.app/",
+      image: "/images/Movie-Stack.png",
     },
+   
     {
       id: 2,
       title: "E-Commerce Store",
@@ -39,4 +40,15 @@ export const projects = [
       live: "https://jasyoutube-clone.netlify.app/",
       image: "/images/YouTube.png",
     },
+     {
+      id: 5,
+      title: "Mini Spotify-clone Website",
+      description:
+        "A mini Spotify clone built with React for browsing and playing music.",
+      tags: ["React", "Tailwind"],
+      github: "https://github.com/jaseeljazc/Mini-Spotify-Clone",
+      live: "https://mini-spotify-clone.vercel.app/",
+      image: "/images/Spotify-clone.png",
+    },
+    
   ];

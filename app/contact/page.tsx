@@ -89,7 +89,7 @@ const Contact = () => {
                   whileHover={{ x: 5 }}
                   className="flex items-center gap-4 text-gray-300 pt-3"
                 >
-                  <a href="/Muhammed_Jaseel_Resume.pdf" download className="btn">
+                  <a href="/Muhammed-Jaseel-Resume.pdf" download className="btn">
                     <button className="border border-violet-600 px-4 py-3 rounded-2xl">Download Resume</button>
                   </a>
                 </motion.div>
